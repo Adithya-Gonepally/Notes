@@ -1,0 +1,57 @@
+pipeline {
+    agent any
+
+    environment {
+        APP_NAME = "MyApp"
+        DEPLOY_ENV = "staging"
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                echo "🔄 Checking out code..."
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo "🔧 Building the application..."
+                sh 'mvn clean compile'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo "🧪 Running unit tests..."
+                sh 'mvn test'
+            }
+        }
+
+        stage('Package') {
+            steps {
+                echo "📦 Packaging the application..."
+                sh 'mvn package'
+            }
+        }
+
+        stage('Deploy') {
+            when {
+                branch 'main'
+            }
+            steps {
+                echo "🚀 Deploying ${APP_NAME} to ${DEPLOY_ENV} environment..."
+                sh './deploy.sh staging'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "✅ Pipeline completed successfully!"
+        }
+        failure {
+            echo "❌ Pipeline failed. Please check the logs."
+        }
+    }
+}

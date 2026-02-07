@@ -1,0 +1,47 @@
+create empty repo in local - git init
+
+ create local repo by clining from remote - git clone <url>
+
+//now in master
+git status
+
+create new branch from master - git checkout -b <branchname>
+
+
+//make your changes
+
+//stage the changes made
+git add . // git add <file>
+
+
+//commit staged changes
+
+git commit -m "messsage"
+
+//push the branch to remote repo
+
+pushing first time - git push --set-upstream origin <branchname>
+
+after first time - git push
+
+//create a pull request - base branch is master, compare branch is your branch
+
+//reviewer reviews the request and approves the changes done
+
+//pull request is merged
+
+// in case of merge conflicts,  "<<<" denoted incoming changes from your branch
+
+
+">>>" denoted existing change - master
+
+choose the change required and resolve the conflict
+
+code merged.
+
+
+// git checkout master
+
+//git pull origin master - pull latest master branch from repo to your local
+
+//git checkout -b <branchname> and repeat the steps

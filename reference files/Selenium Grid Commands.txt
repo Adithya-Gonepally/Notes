@@ -1,0 +1,19 @@
+//Open CMD and initialize your hub
+java -jar selenium-server-4.35.0.jar hub
+
+//now initialize and create a node for the hub hosted in the url http://localhost:4444
+java -jar selenium-server-4.35.0.jar node --hub http://localhost:4444
+
+
+// open http://localhost:4444 and check for active sessions
+//run your tests
+
+//check the hub url for active sessions 
+
+ 
+    <test name="EdgeTest">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="tests.GridSauceLabsTest"/>
+        </classes>
+    </test>
