@@ -1,0 +1,168 @@
+1. Java Programming & OOPs
+Java is the foundational language for the automation questions listed in the document.
+
+Difference between Abstract Class and Interface?
+Abstract Class: Can have both abstract and concrete methods. It supports state (instance variables) and is used when objects share a common base.
+Interface: Traditionally only had abstract methods (now supports default/static). It defines a contract of "what" a class can do, not "how."
+ 
+ 
+ 
+
+What are the OOPs pillars?
+Encapsulation: Wrapping data (variables) and code (methods) together.
+Inheritance: One class acquiring properties of another.
+Polymorphism: One task performed in different ways (Overloading vs. Overriding).
+Abstraction: Hiding implementation details and showing only functionality.
+ 
+ 
+ 
+
+Can multiple inheritance be implemented in Java?
+No, Java does not support multiple inheritance with classes to avoid the "Diamond Problem," but it can be achieved through Interfaces.
+ 
+ 
+ 
+
+Why are Strings immutable in Java?
+For security, caching (String Pool), and synchronization. Once created, their value cannot be changed.
+ 
+
+Compile-time vs. Runtime Exceptions?
+Compile-time (Checked): Checked at compile-time (e.g., IOException, SQLException).
+Runtime (Unchecked): Occur during execution (e.g., NullPointerException, ArrayIndexOutOfBoundsException).
+ 
+ 
+ 
+ 
+2. Selenium Automation
+These questions focus on interacting with web elements and handling browser behavior.
+
+Difference between findElement() and findElements()?
+findElement() returns a single WebElement and throws NoSuchElementException if not found.
+findElements() returns a List<WebElement> and returns an empty list if no elements match.
+ 
+ 
+ 
+ 
+
+Why is CSS Selector often preferred over XPath?
+CSS Selectors are generally faster and have better performance across different browsers, though XPath is more powerful for traversing the DOM (like moving from child to parent).
+ 
+ 
+ 
+ 
+ 
+
+How do you handle dynamic web elements?
+By using dynamic XPaths (functions like contains(), starts-with(), or following-sibling) and implementing Explicit Waits.
+ 
+ 
+ 
+
+What are the different types of Waits in Selenium?
+Implicit Wait: Sets a global timeout for the driver to wait for elements.
+Explicit Wait: Waits for a specific condition (e.g., elementToBeClickable).
+Fluent Wait: Similar to explicit wait but allows setting the polling frequency.
+ 
+ 
+ 
+ 
+
+How to handle Alerts and Iframes?
+Alerts: driver.switchTo().alert().accept() or dismiss().
+Iframes: driver.switchTo().frame(index/id/name).
+ 
+ 
+ 
+3. Manual Testing & Agile
+This section covers the theoretical framework of software quality assurance.
+
+Explain the Defect Life Cycle.
+It is the journey of a bug from discovery to closure: New → Assigned → Open → Fixed → Retest → Closed (or Rejected/Deferred).
+ 
+ 
+ 
+
+Severity vs. Priority?
+Severity: The impact of the bug on the system (e.g., a crash is High Severity).
+Priority: How quickly the bug needs to be fixed (e.g., a typo on the home page logo is High Priority but Low Severity).
+ 
+ 
+ 
+ 
+
+Smoke vs. Sanity Testing?
+Smoke: Done on initial builds to check if the "critical" features work.
+Sanity: Done on stable builds to verify specific bug fixes or changes.
+ 
+ 
+ 
+ 
+
+What are Agile Ceremonies?
+Sprint Planning, Daily Stand-up, Sprint Review, and Sprint Retrospective.
+ 
+4. TestNG Framework & POM
+These topics relate to how you structure and execute your automation scripts.
+
+What is the Page Object Model (POM)?
+A design pattern that creates an object repository for web elements, separating the test logic from the page UI structure to improve maintenance.
+ 
+ 
+
+What is the use of @PageFactory?
+It is an extension of POM used to initialize web elements using the @FindBy annotation.
+ 
+
+How do you control test execution order in TestNG?
+By using the priority attribute in the @Test annotation (e.g., @Test(priority = 1)).
+ 
+ 
+ 
+
+How to achieve parallel test execution?
+By setting the parallel attribute to methods, tests, or classes in the testng.xml file.
+ 
+5. Modern Tools (Git, Jenkins, GenAI, SQL)
+Questions regarding the CI/CD pipeline and data management.
+
+What is a CI/CD Pipeline?
+A continuous process of integrating code changes (CI) and deploying them automatically to environments (CD) using tools like Jenkins.
+ 
+ 
+ 
+
+
+Difference between DELETE, DROP, and TRUNCATE?
+DELETE: DML command; removes specific rows (can be rolled back).
+TRUNCATE: DDL command; removes all rows (faster, cannot be rolled back easily).
+DROP: DDL command; removes the entire table structure and data.
+ 
+ 
+ 
+
+How have you integrated AI/GenAI in your project?
+Common Answer: Using GenAI for generating test data, summarizing defect reports, or helping write boilerplate automation scripts and complex XPaths.
+ 
+ 
+ 
+Coding Challenges Mentioned:
+The document frequently highlights these specific programs you should be ready to write:
+
+Reverse a String (e.g., "Automation").
+ 
+ 
+
+Palindrome Number/String.
+ 
+ 
+
+Find Duplicates in a String.
+ 
+
+Prime Number check.
+ 
+
+Maximum Number in an Array.
+ 
+common questions from interview Questions 1 pdf
